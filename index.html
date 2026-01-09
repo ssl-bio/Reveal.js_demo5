@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Interactive customization with theme-based colors</title>
+<meta name="author" content="Saul SL"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="./src/plugin_extra/customcontrols/style.css"/>
+
+<link rel="stylesheet" href="./src/plugin_extra/drawer/drawer.css"/>
+
+<link rel="stylesheet" href="./src/plugin_extra/pointer/pointer.css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"/>
+
+<link rel="stylesheet" href="./src/css/style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Demo slides">
+<style id="runtime-styles"> </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Interactive customization with theme-based colors</h1><p class="subtitle"></p>
+<h2 class="author">Saul SL</h2><h2 class="date">January 2026</h2>
+</section>
+
+<section>
+<section id="slide-3" class="h-slide bg-outer-box iborder-2x title-sm">
+<h2 id="3">Custom colors</h2>
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body-lg h-content" id="org1163aec">
+<ul class="h-content flex-list grow justify-evenly">
+<li>Each Reveal.js theme defines at least 3 common colors:
+<ul>
+<li>Color for links: <code>--r-link-color</code></li>
+<li>Color for the background: <code>--r-background-color</code></li>
+<li>Color for the text: <code>--r-main-color</code></li>
+
+</ul></li>
+
+<li>These were used to generate a palette of colors with the help of the <a href="https://gka.github.io/chroma.js/">chroma.js</a> library</li>
+
+<li>The color palette was made broadly available by including them in the theme section of the custom css file (<code>base.css</code>)</li>
+
+</ul>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-4" class="h-slide bg-outer-box iborder-2x title-sm">
+<h2 id="4">Description of theme-based palette</h2>
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body h-content" id="orgfdf1a2c">
+<ul class="leading-[1.7]">
+<li>The palette contains <i>gradients</i>, <i>combinations</i> and <i>related</i> colors to those above. 
+<ul>
+<li><b>Gradients</b>:
+<ul>
+<li>Link and Background colors: <code>grad-LinkBg</code></li>
+<li>Link and Main colors: <code>grad-LinkMain</code></li>
+<li>Main and Background colors: <code>grad-MainBg</code></li>
+<li>Dark and Light versions of the Link color: <code>grad-Link</code></li>
+
+</ul></li>
+<li><b>Related to Link color:</b> (relative to the color wheel)
+<ul>
+<li>Analogous colors at ±15, ±30 and +5 degrees: <code>ana-A</code></li>
+<li>Analogous colors at ±45, ±60 and +65 degrees: <code>ana-B</code></li>
+<li>Analogous colors at ±75, ±90 and +105 degrees: <code>ana-C</code></li>
+<li>Opposite colors at ±120, ±150 and 180 degrees: <code>opp-Link=</code></li>
+
+</ul></li>
+<li><b>Combinations</b>: At different percentages of the 2nd color: 12.5%, 25%, 37.5%, 50% and 62.5%
+<ul>
+<li>Link and Background colors: <code>mix-LinkBg</code></li>
+<li>Link and Main colors: <code>mix-LinkMain</code></li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-5" class="h-slide title-sm">
+<h2 id="5">Theme-based palette</h2>
+<div class="text-left text-body-sm border-mix-LinkBg-2 border-3 rounded-lg  px-3 h-content-015" id="org25b8847">
+<p>
+<b>Change the theme see how the palette changes accordingly.</b>
+</p>
+
+<p>
+Click on the <i class="fa-solid fa-bars"></i> menu button (or type <i class="fa-solid fa-keyboard"></i> M) then, select one of the themes <i class="fa-solid fa-circle-half-stroke"></i>
+</p>
+
+</div>
+<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-sm h-content-08" id="org3517cfc">
+<div class="text-left pl-2"><p>Suffix</p></div>
+<div class="grid-cols-5 gap-2 grid">
+<div class="h-content-01"><p>1</p></div>
+<div class="h-content-01"><p>2</p></div>
+<div class="h-content-01"><p>3</p></div>
+<div class="h-content-01"><p>4</p></div>
+<div class="h-content-01"><p>5</p></div>
+</div>
+
+<div class="text-left pl-2"><p>Suffix</p></div>
+<div class="grid-cols-5 gap-2 grid">
+<div class="h-content-01"><p>1</p></div>
+<div class="h-content-01"><p>2</p></div>
+<div class="h-content-01"><p>3</p></div>
+<div class="h-content-01"><p>4</p></div>
+<div class="h-content-01"><p>5</p></div>
+</div>
+
+<div class="text-left pl-2"><p>Gradient Link-Bg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-LinkBg-1"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-2"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-3"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-4"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Gradient Link-Main</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-LinkMain-1"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-2"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-3"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-4"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Gradient Main-Bg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-MainBg-1"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-2"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-3"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-4"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Gradient Link Dark-Light</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-Link-1"><p></p></div>
+<div class="h-content-01 bg-grad-Link-2"><p></p></div>
+<div class="h-content-01 bg-grad-Link-3"><p></p></div>
+<div class="h-content-01 bg-grad-Link-4"><p></p></div>
+<div class="h-content-01 bg-grad-Link-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Analogous 15-30</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-A-1"><p></p></div>
+<div class="h-content-01 bg-ana-A-2"><p></p></div>
+<div class="h-content-01 bg-ana-A-3"><p></p></div>
+<div class="h-content-01 bg-ana-A-4"><p></p></div>
+<div class="h-content-01 bg-ana-A-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Analogous 45-60</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-B-1"><p></p></div>
+<div class="h-content-01 bg-ana-B-2"><p></p></div>
+<div class="h-content-01 bg-ana-B-3"><p></p></div>
+<div class="h-content-01 bg-ana-B-4"><p></p></div>
+<div class="h-content-01 bg-ana-B-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Analogous 75-90</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-C-1"><p></p></div>
+<div class="h-content-01 bg-ana-C-2"><p></p></div>
+<div class="h-content-01 bg-ana-C-3"><p></p></div>
+<div class="h-content-01 bg-ana-C-4"><p></p></div>
+<div class="h-content-01 bg-ana-C-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Opposite 120-150</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-opp-Link-1"><p></p></div>
+<div class="h-content-01 bg-opp-Link-2"><p></p></div>
+<div class="h-content-01 bg-opp-Link-3"><p></p></div>
+<div class="h-content-01 bg-opp-Link-4"><p></p></div>
+<div class="h-content-01 bg-opp-Link-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Desaturate Link</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-des-Link-1"><p></p></div>
+<div class="h-content-01 bg-des-Link-2"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Empty</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-des-B-1"><p></p></div>
+<div class="h-content-01 bg-des-B-2"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Mix Link-Bg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-mix-LinkBg-1"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-2"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-3"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-4"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-5"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Mix Link-Main</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-mix-LinkMain-1"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-2"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-3"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-4"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-5"><p></p></div>
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-6" class="h-slide bg-outer-box iborder-2x title-sm">
+<h2 id="6">Use the palette to customize the theme</h2>
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly text-body-lg h-content" id="org971b5d7">
+<ul class="flex-list grow justify-evenly">
+<li>The slide below provides an interactive palette and controls for customizing the background boxes. Controls to select one of the boxes, as well as the opacity of the color are at the top right.</li>
+<li>Preview of each box is displayed along with the <i>color</i> and <i>opacity</i> values</li>
+<li>A preview of how the slide would look is at the bottom right.
+<ul>
+<li>Change the theme to see the effect of the selected settings on other themes.</li>
+<li>Once satisfied with a set of values these can be applied to future presentations by setting two tailwind utilities (<code>@utility bg-outer-box</code> and <code>@utility bg-inner-box</code>) in the <code>base.css</code> file.</li>
+
+</ul></li>
+
+</ul>
+
+</div>
+</section>
+<section id="slide-6-2" class="h-slide">
+<h3 id="6-2">Theme customization</h3>
+<div class="text-left text-body-sm px-3 h-content-0075" id="orgcc35226">
+<p>
+Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right, then pick <i class="fa-solid fa-arrow-pointer"></i> a color on the left. Change the opacity if needed.
+</p>
+
+</div>
+
+<div class="grid-cols-2 gap-x-2 grid" id="org078c147">
+<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-xs h-content-09" id="org6071d14">
+<div class="text-left pl-2"><p>Suffix</p></div>
+<div class="grid-cols-5 gap-2 grid">
+<div class="h-content-01"><p>1</p></div>
+<div class="h-content-01"><p>2</p></div>
+<div class="h-content-01"><p>3</p></div>
+<div class="h-content-01"><p>4</p></div>
+<div class="h-content-01"><p>5</p></div>
+</div>
+
+<div class="text-left pl-2"><p>Suffix</p></div>
+<div class="grid-cols-5 gap-2 grid">
+<div class="h-content-01"><p>1</p></div>
+<div class="h-content-01"><p>2</p></div>
+<div class="h-content-01"><p>3</p></div>
+<div class="h-content-01"><p>4</p></div>
+<div class="h-content-01"><p>5</p></div>
+</div>
+
+<div class="text-left pl-2"><p>grad-LinkBg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-LinkBg-1 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-2 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-3 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-4 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkBg-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>grad-LinkMain</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-LinkMain-1 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-2 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-3 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-4 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-LinkMain-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>grad-MainBg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-MainBg-1 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-2 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-3 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-MainBg-4 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>grad-Link</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-grad-Link-1 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-Link-2 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-Link-3 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-Link-4 color-option"><p></p></div>
+<div class="h-content-01 bg-grad-Link-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>ana-A</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-A-1 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-A-2 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-A-3 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-A-4 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-A-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>ana-B</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-B-1 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-B-2 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-B-3 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-B-4 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-B-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>ana-C</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-ana-C-1 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-C-2 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-C-3 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-C-4 color-option"><p></p></div>
+<div class="h-content-01 bg-ana-C-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>opp-Link</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-opp-Link-1 color-option"><p></p></div>
+<div class="h-content-01 bg-opp-Link-2 color-option"><p></p></div>
+<div class="h-content-01 bg-opp-Link-3 color-option"><p></p></div>
+<div class="h-content-01 bg-opp-Link-4 color-option"><p></p></div>
+<div class="h-content-01 bg-opp-Link-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>dess-Link</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-des-Link-1 color-option"><p></p></div>
+<div class="h-content-01 bg-des-Link-2 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>Empty</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-des-B-1 color-option"><p></p></div>
+<div class="h-content-01 bg-des-B-2 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>mix-LinkBg</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-mix-LinkBg-1 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-2 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-3 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-4 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkBg-5 color-option"><p></p></div>
+</div>
+
+<div class="text-left pl-2"><p>mix-LinkMain</p></div>
+<div class="grid-cols-5 gap-1 grid">
+<div class="h-content-01 bg-mix-LinkMain-1 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-2 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-3 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-4 color-option"><p></p></div>
+<div class="h-content-01 bg-mix-LinkMain-5 color-option"><p></p></div>
+</div>
+
+</div>
+
+<div class="text-body-sm flex flex-row flex-wrap justify-evenly h-content-09" id="org607315a">
+<div class="flex items-center gap-2">
+  <input type="radio" id="outer-option" value="outer" class="peer/outer" name="boxSelector" checked />
+  <label for="outer" class="peer-checked/outer:text-grad-LinkMain-3">Outer box</label>
+  <input type="radio" id="inner-option" value="inner" class="peer/inner" name="boxSelector" />
+  <label for="inner" class="peer-checked/inner:text-grad-LinkMain-3">Inner box</label>
+</div>
+<div class="flex items-center">
+  <label> Opacity: <span id="opacityDisplayedValue">50%</span> </label>
+  <input type="range" id="opacitySlider" min="0" max="100" value="50" class="accent-mix-LinkBg-1" >
+</div>
+
+<div class="bg-outer-box w-slide-02 h-content-0125" id="outer-box-value">
+<p>
+
+</p>
+
+</div>
+
+<div class="bg-inner-box w-slide-02 h-content-0125" id="inner-box-value">
+<p>
+
+</p>
+
+</div>
+
+<div class="bg-outer-box w-slide-045 justify-items-center iborder-3x text-body-lg h-content-065" id="orgf5ae6d6">
+<p>
+<b>Demo slide</b>
+</p>
+<div class="bg-inner-box grow w-slide-04 iborder-2x text-body-sm text-left h-content-05" id="org1678821">
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-8">
+<h2 id="8"><i>Thank you</i></h2>
+<i class="fas fa-smile text-section textCol-link"></i>
+</section>
+</section>
+</div>
+</div>
+<p>Created by SSL</p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+<script src="./src/plugin_extra/menu/menu.js"></script>
+<script src="./src/plugin_extra/customcontrols/plugin.js"></script>
+<script src="./src/plugin_extra/drawer/drawer.js"></script>
+<script src="./src/plugin_extra/pointer/pointer.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition: 'slide', progress:true, history:true, center:true, mouseWheel:false, menu:{ themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+,
+,
+,
+]
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chroma-js@2.4.2/chroma.min.js"></script>
+<script src="./src/js/ifunctions.js"></script>
+<script src="./src/js/icustom.js"></script>
+</body>
+</html>
