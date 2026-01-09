@@ -24,17 +24,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"/>
 
 <link rel="stylesheet" href="./src/css/style.css"/>
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
-</script>
 <meta name="description" content="Demo slides">
 <style id="runtime-styles"> </style>
 </head>
@@ -48,9 +37,9 @@
 <section>
 <section id="slide-3" class="h-slide bg-outer-box iborder-2x title-sm">
 <h2 id="3">Custom colors</h2>
-<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body-lg h-content" id="org1163aec">
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body-lg h-content" id="org11f32e4">
 <ul class="h-content flex-list grow justify-evenly">
-<li>Each Reveal.js theme defines at least 3 common colors:
+<li>Each <a href="https://revealjs.com/">Reveal.js</a> theme defines at least 3 common colors:
 <ul>
 <li>Color for links: <code>--r-link-color</code></li>
 <li>Color for the background: <code>--r-background-color</code></li>
@@ -70,7 +59,7 @@
 <section>
 <section id="slide-4" class="h-slide bg-outer-box iborder-2x title-sm">
 <h2 id="4">Description of theme-based palette</h2>
-<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body h-content" id="orgfdf1a2c">
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly content-start pl-4 text-body h-content" id="orgad1acd2">
 <ul class="leading-[1.7]">
 <li>The palette contains <i>gradients</i>, <i>combinations</i> and <i>related</i> colors to those above. 
 <ul>
@@ -107,7 +96,7 @@
 <section>
 <section id="slide-5" class="h-slide title-sm">
 <h2 id="5">Theme-based palette</h2>
-<div class="text-left text-body-sm border-mix-LinkBg-2 border-3 rounded-lg  px-3 h-content-015" id="org25b8847">
+<div class="text-left text-body-sm border-mix-LinkBg-2 border-3 rounded-lg  px-3 h-content-015" id="org48d8266">
 <p>
 <b>Change the theme see how the palette changes accordingly.</b>
 </p>
@@ -117,7 +106,7 @@ Click on the <i class="fa-solid fa-bars"></i> menu button (or type <i class="fa-
 </p>
 
 </div>
-<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-sm h-content-08" id="org3517cfc">
+<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-sm h-content-08" id="org4465b51">
 <div class="text-left pl-2"><p>Suffix</p></div>
 <div class="grid-cols-5 gap-2 grid">
 <div class="h-content-01"><p>1</p></div>
@@ -243,7 +232,7 @@ Click on the <i class="fa-solid fa-bars"></i> menu button (or type <i class="fa-
 <section>
 <section id="slide-6" class="h-slide bg-outer-box iborder-2x title-sm">
 <h2 id="6">Use the palette to customize the theme</h2>
-<div class="flex flex-col bg-inner-box iborder-3x justify-evenly text-body-lg h-content" id="org971b5d7">
+<div class="flex flex-col bg-inner-box iborder-3x justify-evenly text-body-lg h-content" id="org4476ab4">
 <ul class="flex-list grow justify-evenly">
 <li>The slide below provides an interactive palette and controls for customizing the background boxes. Controls to select one of the boxes, as well as the opacity of the color are at the top right.</li>
 <li>Preview of each box is displayed along with the <i>color</i> and <i>opacity</i> values</li>
@@ -260,15 +249,15 @@ Click on the <i class="fa-solid fa-bars"></i> menu button (or type <i class="fa-
 </section>
 <section id="slide-6-2" class="h-slide">
 <h3 id="6-2">Theme customization</h3>
-<div class="text-left text-body-sm px-3 h-content-0075" id="orgcc35226">
+<div class="text-left text-body-sm px-3 h-content-0075" id="orgdc8d5dc">
 <p>
 Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right, then pick <i class="fa-solid fa-arrow-pointer"></i> a color on the left. Change the opacity if needed.
 </p>
 
 </div>
 
-<div class="grid-cols-2 gap-x-2 grid" id="org078c147">
-<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-xs h-content-09" id="org6071d14">
+<div class="grid-cols-2 gap-x-2 grid" id="org98e2d79">
+<div class="grid grid-cols-[15%_34%_15%_34%] gap-x-1 text-body-xs h-content-09" id="org12bb3bc">
 <div class="text-left pl-2"><p>Suffix</p></div>
 <div class="grid-cols-5 gap-2 grid">
 <div class="h-content-01"><p>1</p></div>
@@ -390,7 +379,7 @@ Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right,
 
 </div>
 
-<div class="text-body-sm flex flex-row flex-wrap justify-evenly h-content-09" id="org607315a">
+<div class="text-body-sm flex flex-row flex-wrap justify-evenly h-content-09" id="orgdf56643">
 <div class="flex items-center gap-2">
   <input type="radio" id="outer-option" value="outer" class="peer/outer" name="boxSelector" checked />
   <label for="outer" class="peer-checked/outer:text-grad-LinkMain-3">Outer box</label>
@@ -416,11 +405,11 @@ Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right,
 
 </div>
 
-<div class="bg-outer-box w-slide-045 justify-items-center iborder-3x text-body-lg h-content-065" id="orgf5ae6d6">
+<div class="bg-outer-box w-slide-045 justify-items-center iborder-3x text-body-lg h-content-065" id="org78955fd">
 <p>
 <b>Demo slide</b>
 </p>
-<div class="bg-inner-box grow w-slide-04 iborder-2x text-body-sm text-left h-content-05" id="org1678821">
+<div class="bg-inner-box grow w-slide-04 iborder-2x text-body-sm text-left h-content-05" id="org247cb65">
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -446,6 +435,8 @@ Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right,
 </div>
 <p>Created by SSL</p>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+
 <script src="./src/plugin_extra/menu/menu.js"></script>
 <script src="./src/plugin_extra/customcontrols/plugin.js"></script>
 <script src="./src/plugin_extra/drawer/drawer.js"></script>
@@ -455,16 +446,8 @@ Select <i class="fa-solid fa-circle-dot"></i> one of the two boxes on the right,
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition: 'slide', progress:true, history:true, center:true, mouseWheel:false, menu:{ themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10},
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-,
-,
-,
-]
-
+plugins: [RevealNotes, RevealMenu, RevealCustomControls, RevealPointer, RevealDrawer],
+width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition: 'slide', progress:true, history:true, center:true, mouseWheel:false, menu:{ themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
 });
 
 </script>
