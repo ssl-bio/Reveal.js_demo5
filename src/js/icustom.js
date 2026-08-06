@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setState();
     setColors();
     if (!opacitySlider || !opacityDisplayedValue) {
-	updateInnerBoxCSSVar();
-	updateOuterBoxCSSVar();
+	updateCSSVar("inner");
+	updateCSSVar("outer");
     } else {
 	initColorPicker();
     }
